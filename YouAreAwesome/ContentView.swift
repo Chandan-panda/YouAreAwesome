@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var message="Football"
     var body: some View {
         VStack {
             Text("What is Football to You ?")
@@ -28,6 +29,14 @@ struct ContentView: View {
                     .scaledToFit()
                     .foregroundStyle(.purple)
             }
+            
+            Button("Click"){
+                message="It is Soccer !!!"
+            }
+            Text(message)
+                .font(.largeTitle)
+                .fontWeight(.bold)
+                .foregroundStyle(.red)
         }
         .padding()
     }
